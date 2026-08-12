@@ -1,0 +1,108 @@
+/* 1. RESET STYLÓW - wyrównujemy marginesy przeglądarki */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    padding: 20px;
+    color: #333;
+    max-width: 1200px; /* Ograniczamy szerokość strony, by ładnie wyglądała na dużych ekranach */
+    margin: 0 auto;    /* Wyśrodkowanie całej strony */
+}
+
+/* 2. NAGŁÓWEK (HEADER) */
+header {
+    margin-bottom: 30px;
+}
+
+.banner {
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;            /* Kontener zajmuje 100% dostępnej szerokości */
+    overflow: hidden;       /* Pilnuje, żeby nic nie wylało się poza ramy */
+}
+
+.banner img {
+    width: 50%;            /* Wymuszamy szerokość na 100% kontenera */
+    height: 325px;          /* Ustawiamy stałą wysokość baneru (możesz to zmienić) */
+    object-fit: fill;      /* Złota zasada CSS do banerów! */
+}
+
+h1 {
+    font-weight: normal;
+    border-bottom: 1px dashed #333; /* Przerywana linia ze szkicu pod nazwą witryny */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* 3. UKŁAD DWUKOLUMNOWY (GŁÓWNY KONTENER) */
+.container {
+    display: flex; /* Flexbox pozwala łatwo ułożyć elementy obok siebie */
+    gap: 40px;     /* Odstęp między lewą a prawą kolumną */
+}
+
+/* 4. LEWA KOLUMNA (MAIN) */
+main {
+    flex: 70%; /* Zajmuje 70% dostępnej szerokości */
+}
+
+main h2 {
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+/* Zdjęcie wplecione w tekst artykułu */
+main img {
+    float: right;           /* Wyrównanie do prawej, tekst opływa z lewej */
+    width: 45%;             /* Zdjęcie zajmie maksymalnie 45% szerokości kolumny */
+    height: auto;           /* Kluczowe: zachowuje oryginalne proporcje (1037x1585) */
+    margin: 0 0 20px 25px;  /* Odpycha tekst: 0 z góry, 0 z prawej, 20px z dołu, 25px z lewej */
+    border: 1px solid #ccc; /* Opcjonalnie: delikatniejsza, szara ramka. Jeśli nie chcesz, możesz usunąć tę linię */
+}
+
+/* 5. PRAWA KOLUMNA (PASEK BOCZNY) */
+aside {
+    flex: 30%; /* Zajmuje 30% dostępnej szerokości */
+    border: 1px solid #333; /* Zewnętrzna ramka paska bocznego */
+}
+
+.widget {
+    border-bottom: 1px solid #333; /* Poziome linie oddzielające bloki w menu */
+    padding: 15px;
+}
+
+/* Usuwamy dolną linię z ostatniego elementu, bo główna ramka (aside) już ją ma */
+.widget:last-child {
+    border-bottom: none;
+}
+
+.widget h3 {
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+/* Wygląd list i hiperlinków w pasku bocznym */
+.widget ul {
+    list-style-type: none; /* Ukrywamy standardowe kropki listy HTML */
+}
+
+.widget ul li {
+    margin-bottom: 5px;
+}
+
+.widget ul li a {
+    text-decoration: none; 
+    color: #8B0000; /* Gęboka, ciemna czerwień (DarkRed) */
+}
+
+.widget ul li a:hover {
+    text-decoration: underline; 
+    color: #b30000; /* Nieco jaśniejsza czerwień po najechaniu myszką */
+}
