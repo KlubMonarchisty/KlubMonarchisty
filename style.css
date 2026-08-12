@@ -106,3 +106,24 @@ aside {
     text-decoration: underline; 
     color: #b30000; /* Nieco jaśniejsza czerwień po najechaniu myszką */
 }
+/* WERSJA MOBILNA (Uruchomi się tylko na ekranach węższych niż 768px) */
+@media (max-width: 768px) {
+    
+    /* Zamieniamy kolumny obok siebie na bloki jeden pod drugim */
+    .container {
+        flex-direction: column; 
+        gap: 20px;
+    }
+
+    /* Lewa i prawa strona zajmują teraz 100% szerokości telefonu */
+    main, aside {
+        flex: 100%;
+    }
+
+    /* Zdjęcie w artykule przestaje opływać tekst i zajmuje całą szerokość */
+    main img {
+        float: none;
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+}
