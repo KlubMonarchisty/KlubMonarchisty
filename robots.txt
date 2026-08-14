@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://klubmonarchisty.github.io/KlubMonarchisty/sitemap.xml
